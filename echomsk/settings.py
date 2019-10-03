@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+import scrapy
 # Scrapy settings for echomsk project
 #
 # For simplicity, this file contains only settings considered important or
@@ -48,6 +48,7 @@ ROBOTSTXT_OBEY = False
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 SPIDER_MIDDLEWARES = {
    'echomsk.middlewares.EchomskSpiderMiddleware': 543,
+   scrapy.spidermiddlewares.offsite.OffsiteMiddleware': None,
 }
 
 # Enable or disable downloader middlewares
