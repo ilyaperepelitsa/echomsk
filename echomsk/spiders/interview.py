@@ -62,35 +62,41 @@ class InterviewSpider(CrawlSpider):
         current_text = ""
         current_speaker = ""
         for index, paragraph in enumerate(text):
-            print(paragraph)
-                # print(i.xpath('name'))
-            # chunk_name = chnk.xpath('name()')
-            # print(paragraph)
-        #
-        #     chunk = clean_chunk(paragraph)
-        #     if len(chunk) > 1:
-        #         current_speaker = chunk[0]
-        #         current_text = chunk[-1]
-        #     elif len(chunk) == 1:
-        #         current_text += " "
-        #         current_text += chunk[0]
-        #
-        #     if (index + 1) < len(text):
-        #         next_chunk = clean_chunk(text[index + 1])
-        #         if len(next_chunk) != 1:
-        #             whole_interview.append([index, current_speaker,
-        #                                                 current_text])
-        #             current_text = ""
-        #             current_speaker = ""
-        #         else:
-        #             pass
-        #     else:
-        #         whole_interview.append([index, current_speaker,
-        #                                             current_text])
-        #
-        # for i in whole_interview:
-        #     print(i)
+            chunk_name = paragraph.xpath('name()')
 
+            chunk = clean_chunk(paragraph)
+            if len(chunk) > 1:
+                current_speaker = chunk[0]
+                current_text = chunk[-1]
+            elif len(chunk) == 1:
+                current_text += " "
+                current_text += chunk[0]
+
+            if (index + 1) < len(text):
+                next_chunk = clean_chunk(text[index + 1])
+                if len(next_chunk) != 1:
+                    whole_interview.append([index, current_speaker,
+                                                        current_text])
+                    current_text = ""
+                    current_speaker = ""
+                else:
+                    pass
+            else:
+                whole_interview.append([index, current_speaker,
+                                                    current_text])
+        
+        for i in whole_interview:
+            print(i)
+
+
+
+
+        # text = [i.replace('\r\n', '').strip() for i in text]
+        # # text = [i for i in text if i != "\r\n"]
+        # text = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in text]
+        # text = [i.strip() for i in text]
+        # text = [i for i in text if len(i) > 1]
+        # pass
 
 
 
