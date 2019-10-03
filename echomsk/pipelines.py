@@ -14,12 +14,15 @@ class EchomskPipeline(object):
 
         try:
             date = item["date"][0]
-            
+
+
         try:
             guest_name = item["guest_name"][0]
 
+
         try:
             guest_title = item["guest_title"][0]
+
 
         try:
             host_name = item["host_name"][0]
