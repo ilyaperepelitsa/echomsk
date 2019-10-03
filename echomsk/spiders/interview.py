@@ -27,6 +27,13 @@ class InterviewSpider(scrapy.Spider):
             ),
             follow=True,
             callback="parse_page"),
+            Rule(
+                LinkExtractor(
+                    canonicalize=True,
+                    unique=True
+                ),
+                follow=True,
+                callback="parse_page"),
     ]
 
 
