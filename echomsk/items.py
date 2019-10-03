@@ -19,7 +19,7 @@ class InterviewParagraph(Item):
     host_name = Field()
 
     index = Field()
-    job_text = Field()
+    speaker = Field()
     job_lists = Field()
     job_apply_link = Field()
     job_apply_text = Field()
