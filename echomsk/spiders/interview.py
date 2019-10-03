@@ -19,6 +19,20 @@ class InterviewSpider(scrapy.Spider):
     allowed_domains = ['echo.msk.ru']
     start_urls = ['https://echo.msk.ru/programs/personalno/']
 
+    rules = [
+    Rule(
+        LinkExtractor(
+            canonicalize=True,
+            unique=True
+        ),
+        follow=True,
+        callback="parse_page"
+    )
+]
+This rule orders the extraction of...
+
+
+
     def parse(self, response):
         pass
 
