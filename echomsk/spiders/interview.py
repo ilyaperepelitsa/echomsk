@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.selector import Selector
 
-from scrapy.linkextractor import LinkExtractor, LxmlLinkExtractor
+from scrapy.linkextractor import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
 
