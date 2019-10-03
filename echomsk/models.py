@@ -51,11 +51,7 @@ class InterviewParagraph(Base_item):
             self.total_games,
             self.url, self.match_name,
             self.title, self.subtitle,
-            self.title_pos,
-            self.video_list_size,
-            self.basic_index,
-            self.terminal_title,
-            self.terminal_title_pos)
+            self.title_pos)
 
 
 # class FailedBMIDs(Base_item):
