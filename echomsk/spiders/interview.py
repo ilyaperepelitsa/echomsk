@@ -131,7 +131,7 @@ class InterviewSpider(CrawlSpider):
                 interview_item['guest_name'] = entry['guest_name']
                 interview_item['guest_title'] = entry['guest_title']
                 interview_item['host_name'] = entry['host_name']
-                interview_item['index'] = i[0]
+                interview_item['index'] = int(i[0])
                 interview_item['speaker'] = str(i[1])
                 interview_item['paragraph'] = str(i[2])
                 # .encode('ascii','ignore')
