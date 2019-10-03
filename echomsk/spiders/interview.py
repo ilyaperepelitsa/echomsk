@@ -100,7 +100,8 @@ class InterviewSpider(CrawlSpider):
         #     # print(i)
         #     pass
 
-        print({"date": })
+        print({"date": ,
+                "sadasd" : })
 
 
 
