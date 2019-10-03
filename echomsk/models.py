@@ -35,7 +35,9 @@ class InterviewParagraph(Base_item):
     guest_name = Column(VARCHAR(50), nullable=True)
     guest_title = Column(TEXT, nullable=True)
     host_name = Column(VARCHAR(50), unique = False)
-    title_pos = Column(INTEGER, nullable=True)
+    index = Column(INTEGER, nullable=True)
+
+
     match_name = Column(TEXT, unique = False, nullable=True)
     title = Column(TEXT, unique = False, nullable=True)
     subtitle = Column(TEXT, unique = False, nullable=True)
