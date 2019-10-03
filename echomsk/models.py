@@ -31,7 +31,7 @@ Base_item = declarative_base()
 class InterviewParagraph(Base_item):
     __tablename__ = "video_url_entries"
     id = Column(INTEGER, primary_key = True)
-    bmid = Column(VARCHAR(10), nullable=False)
+    date = Column(Date, nullable=False)
     nid = Column(VARCHAR(15), nullable=True)
     total_games = Column(INTEGER, nullable=True)
     url = Column(TEXT, unique = False)
