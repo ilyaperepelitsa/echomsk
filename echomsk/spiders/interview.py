@@ -88,8 +88,8 @@ class InterviewSpider(CrawlSpider):
         # print(whole_interview)
 
 
-        for i , k in enumerate(whole_interview):
-            print(str(i) + "__" + str(len(k)) + "__ " + k)
+        # for i , k in enumerate(whole_interview):
+        #     print(str(i) + "__" + str(len(k)) + "__ " + k)
 
         print(whole_interview[::2])
         # whole_interview[1::2]
