@@ -21,7 +21,7 @@ from sqlalchemy import and_
 def clean_chunk(text):
 
     chunk = Selector(text=text).xpath('//text()').getall()
-    chunk = [i.replace('\r\n', '').strip() for i in chunk]
+    chunk = [i.replace('\r\n', '').strip().replace("\xa0", " ") for i in chunk]
     chunk = [re.sub(r'^НОВОСТИ|новости|РЕКЛАМА|реклама$', '', i) for i in chunk]
     chunk = [i.strip() for i in chunk]
     chunk = [i for i in chunk if len(i) > 1]
