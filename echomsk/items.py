@@ -20,6 +20,6 @@ class InterviewItem(Item):
 
     index = Field()
     speaker = Field()
-    text = Field()
+    paragraph = Field()
     url = Field()
     pass
