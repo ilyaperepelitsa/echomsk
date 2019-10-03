@@ -74,4 +74,4 @@ class InterviewSpider(scrapy.Spider):
 # pew[1::2]
 
 
-response.xpath('//div[@class = "content")]////div[@class = "content")]').get()
+response.xpath('//div[@class = "content")]//div[@class = "rel")]').get()
