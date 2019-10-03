@@ -127,7 +127,7 @@ class InterviewSpider(CrawlSpider):
 
             for i in entry['whole_interview']:
                 interview_item = ItemLoader(item = ApiItem(), response = response)
-                interview_item.add_value('bmid', meta['bmid'])
+                interview_item
                 interview_item.add_value('nid', meta['nid'])
                 interview_item.add_value('total_games', meta['total_games'])
                 interview_item.add_value('url', meta['url'])
