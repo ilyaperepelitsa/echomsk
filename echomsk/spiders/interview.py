@@ -138,12 +138,8 @@ class InterviewSpider(CrawlSpider):
                     interview_item.add_value('guest_title', entry['guest_title'])
                     interview_item.add_value('host_name', entry['host_name'])
                     interview_item.add_value('index', int(i[0]))
-                    # ['index'] =
                     interview_item.add_value('speaker', str(i[1]))
-                    # ['speaker'] =
                     interview_item.add_value('paragraph', str(i[2]))
-                    # ['paragraph'] = str(i[2])
-                    # .encode('ascii','ignore')
                     interview_item.add_value('url', response.url)
                     # ['url'] = respone.url()
 
