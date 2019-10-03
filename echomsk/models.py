@@ -45,7 +45,7 @@ class InterviewParagraph(Base_item):
     def __repr__(self):
         return "<Base_item(id='%s', date='%s', guest_name='%s',\
                         guest_title='%s', host_name='%s', index='%s',\
-                        speaker='%s', paragraph='%s', paragraph='%s')>"\
+                        speaker='%s', paragraph='%s', url='%s')>"\
         %(self.id, self.date, self.guest_name,
             self.guest_title,
             self.host_name, self.index,
