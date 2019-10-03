@@ -125,6 +125,8 @@ class InterviewSpider(CrawlSpider):
             print(entry['guest_name'])
             print(len(entry['interview']))
 
+            if 
+
             for i in entry['interview']:
                 interview_item = ItemLoader(item = ApiItem(), response = response)
                 interview_item['date'] = entry['date']
