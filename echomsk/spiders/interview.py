@@ -23,7 +23,7 @@ class InterviewSpider(scrapy.Spider):
         text = response.xpath('//div[@class="mmcontainer"]//p').getall()
         whole_interview = []
         current_text = []
-        
+        current_speaker = 
         for index, part in enumerate(text):
 
         # text = [i.replace('\r\n', '').strip() for i in text]
