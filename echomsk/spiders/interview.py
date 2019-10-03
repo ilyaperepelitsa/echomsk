@@ -64,9 +64,9 @@ class InterviewSpider(CrawlSpider):
         for index, paragraph in enumerate(text):
             chunk = Selector(text=text).xpath('//*').getall()
             for i in chunk:
-                print(i.xpath)
+                print(i.xpath('name'))
             # chunk_name = chnk.xpath('name()')
-            print(paragraph)
+            # print(paragraph)
         #
         #     chunk = clean_chunk(paragraph)
         #     if len(chunk) > 1:
