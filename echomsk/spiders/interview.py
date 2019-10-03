@@ -84,19 +84,10 @@ class InterviewSpider(CrawlSpider):
             else:
                 whole_interview.append([index, current_speaker,
                                                     current_text])
-    
+
         for i in whole_interview:
             print(i)
 
-
-
-
-        # text = [i.replace('\r\n', '').strip() for i in text]
-        # # text = [i for i in text if i != "\r\n"]
-        # text = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in text]
-        # text = [i.strip() for i in text]
-        # text = [i for i in text if len(i) > 1]
-        # pass
 
 
 
