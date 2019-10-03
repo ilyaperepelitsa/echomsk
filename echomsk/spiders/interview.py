@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-
+from scrapy.selector import Selector
 
 class InterviewSpider(scrapy.Spider):
     name = 'interview'
@@ -24,7 +24,7 @@ class InterviewSpider(scrapy.Spider):
         whole_interview = []
         current_text = ""
         current_speaker = ""
-        for index, text in enumerate(text):
+        for index, paragraph in enumerate(text):
 
 
         # text = [i.replace('\r\n', '').strip() for i in text]
