@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import scrapy
+# import scrapy
 # Scrapy settings for echomsk project
 #
 # For simplicity, this file contains only settings considered important or
