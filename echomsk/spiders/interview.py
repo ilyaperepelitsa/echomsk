@@ -3,12 +3,12 @@ import scrapy
 from scrapy.selector import Selector
 
 def clean_chunk(text):
-    chunk = Selector(text=paragraph).xpath('//text()').getall()
+    chunk = Selector(text=text).xpath('//text()').getall()
     chunk = [i.replace('\r\n', '').strip() for i in chunk]
     chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in chunk]
     chunk = [i.strip() for i in chunk]
     chunk = [i for i in chunk if len(i) > 1]
-    return
+    return chunk
 
 class InterviewSpider(scrapy.Spider):
     name = 'interview'
