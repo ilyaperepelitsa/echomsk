@@ -29,23 +29,28 @@ class EchomskPipeline(object):
 
         try:
             host_name = item["host_name"][0]
-
+        except:
+            date = None
 
         try:
             index = item["index"][0]
-
+        except:
+            date = None
 
         try:
             speaker = item["speaker"][0]
-
+        except:
+            date = None
 
         try:
             text = item["text"][0]
-
+        except:
+            date = None
 
         try:
             url = item["url"][0]
-
+        except:
+            date = None
 
         data_entry = {"date" = item["date"][0],
                         "guest_name" : item["guest_name"][0],
