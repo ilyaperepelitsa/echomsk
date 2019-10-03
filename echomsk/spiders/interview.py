@@ -14,7 +14,7 @@ def clean_chunk(text):
     chunk = [i for i in chunk if len(i) > 1]
     return chunk
 
-class InterviewSpider(scrapy.Spider):
+class InterviewSpider(scrapy.CrawlSpider):
     name = 'interview'
     # allowed_domains = ['echo.msk.ru']
     start_urls = ['https://echo.msk.ru/programs/personalno/']
