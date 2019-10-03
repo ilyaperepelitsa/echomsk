@@ -22,12 +22,12 @@ class InterviewSpider(scrapy.Spider):
     rules =(
         Rule(
             LinkExtractor(
-                restrict_xpaths = '//*[@class="pager"]'
+                restrict_xpaths = '//*[@class="pager"]',
                 # unique=True
             ), callback = "parse"),
         Rule(
             LinkExtractor(
-                restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]'
+                restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
                 # unique=True,
             ), callback="parse_interview")
             )
