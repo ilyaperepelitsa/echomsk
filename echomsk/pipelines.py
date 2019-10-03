@@ -52,8 +52,8 @@ class EchomskPipeline(object):
         except:
             url = None
 
-        data_entry = {"date" = date"][0],
-                        "guest_name" : item["guest_name"][0],
+        data_entry = {"date" = date,
+                        "guest_name" : guest_name"][0],
                         "guest_title" : item["guest_title"][0],
                         "host_name" : item["host_name"][0],
                         "index" : item["index"][0],
