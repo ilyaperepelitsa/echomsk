@@ -72,11 +72,11 @@ class InterviewSpider(CrawlSpider):
         # # host name
         host_name = response.xpath('//div[contains(@class, "lead")]//a//text()').get()
 
-        interview_exist = session_test.query(exists().where(and_(
+        interview_exists = session_test.query(exists().where(and_(
                     InterviewParagraph.broadcast_date == broadcast_date,
                     InterviewParagraph.guest_name == guest_name
                     ))).scalar()
-
+        if not 
         text = response.xpath('//div[@class="mmplayer"]//p').getall()
         whole_interview = []
         current_text = ""
