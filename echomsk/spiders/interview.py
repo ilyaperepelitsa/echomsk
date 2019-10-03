@@ -20,6 +20,6 @@ class InterviewSpider(scrapy.Spider):
         # host name
         //div[contains(@class, "lead")]//a//text()
 
-        interview = response.xpath('//div[@class="mmcontainer"]//p//text()').getall()
-        [i for i in text if i != "\r\n"]  
+        text = response.xpath('//div[@class="mmcontainer"]//p//text()').getall()
+        text[i for i in text if i != "\r\n"]
         pass
