@@ -26,9 +26,8 @@ class InterviewSpider(scrapy.Spider):
             unique=True
         ),
         follow=True,
-        callback="parse_page"
-    )
-]
+        callback="parse_page")
+    ]
 
 
     def parse(self, response):
