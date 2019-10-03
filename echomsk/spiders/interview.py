@@ -73,7 +73,7 @@ class InterviewSpider(CrawlSpider):
         host_name = response.xpath('//div[contains(@class, "lead")]//a//text()').get()
 
         nid_error_exists = session_test.query(exists().where(and_(
-                    InterviewParagraph.bmid == check_nid['bmid'],
+                    InterviewParagraph.broadcast_date == check_nid['bmid'],
                     InterviewParagraph.error_type == 'newsId not extracted'
                     ))).scalar()
 
