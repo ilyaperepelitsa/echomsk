@@ -41,8 +41,8 @@ class InterviewParagraph(Base_item):
     paragraph = Column(TEXT, nullable=True)
 
     def __repr__(self):
-        return "<Base_item(id='%s', date='%s', nid='%s',\
-                        total_games='%s', url='%s', match_name='%s',\
+        return "<Base_item(id='%s', date='%s', guest_name='%s',\
+                        guest_title='%s', url='%s', match_name='%s',\
                         title='%s', subtitle='%s',\
                         title_pos='%s',\
                         video_list_size='%s', basic_index='%s',\
