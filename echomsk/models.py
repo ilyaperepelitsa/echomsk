@@ -38,7 +38,7 @@ class InterviewParagraph(Base_item):
     index = Column(INTEGER, nullable=True)
 
     speaker = Column(VARCHAR(50), unique = False)
-    match_name = Column(TEXT, nullable=True)
+    paragraph = Column(TEXT, nullable=True)
 
     title = Column(TEXT, unique = False, nullable=True)
     subtitle = Column(TEXT, unique = False, nullable=True)
