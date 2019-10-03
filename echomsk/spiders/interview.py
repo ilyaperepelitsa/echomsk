@@ -27,7 +27,6 @@ class InterviewSpider(scrapy.Spider):
             )),
         Rule(
             LinkExtractor(
-                allow=[r'.*',],
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
                 unique=True,
             ), callback="parse_interview")
