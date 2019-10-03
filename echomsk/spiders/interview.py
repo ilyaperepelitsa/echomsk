@@ -84,6 +84,7 @@ class InterviewSpider(CrawlSpider):
                 # current_text = ""
                 # current_speaker = ""
         print(whole_interview)
+        for i
 
 
 
