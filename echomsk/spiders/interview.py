@@ -107,7 +107,9 @@ class InterviewSpider(CrawlSpider):
                 "interview" : whole_interview,
                 }
         print("=======================================")
-        print(entry['da'])
+        print(entry['date'])
+        print(entry['date'])
+        print(entry['date'])
 
 
 
