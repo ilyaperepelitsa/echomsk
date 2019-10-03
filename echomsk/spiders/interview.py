@@ -52,7 +52,7 @@ class InterviewSpider(CrawlSpider):
 
     def parse_interview(self, response):
         # # date
-        # response.xpath('//div[@class="date left"]//strong/text()').get()
+        response.xpath('//div[@class="date left"]//strong/text()').get()
         # # guest name
         # response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
         # # guest title
