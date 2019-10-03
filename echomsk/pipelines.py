@@ -59,7 +59,7 @@ class EchomskPipeline(object):
                         "index" : index,
                         "speaker" : speaker,
                         "text" : text,
-                        "url" : item["url"][0]
+                        "url" : url
                         }
 
         # data_exists = session_test.query(exists().where(
