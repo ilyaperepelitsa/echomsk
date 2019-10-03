@@ -16,7 +16,7 @@ class EchomskPipeline(object):
                         "index" : item["match_name"],
                         "speaker" : item["title"],
                         "text" : item["subtitle"],
-                        "title_pos" : item["title_pos"],
+                        "url" : item["title_pos"],
                         "video_list_size" : item["video_list_size"],
                         "basic_index" : item["basic_index"],
                         "terminal_title" : item["terminal_title"],
