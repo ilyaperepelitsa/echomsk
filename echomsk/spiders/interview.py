@@ -84,9 +84,7 @@ class InterviewSpider(CrawlSpider):
             else:
                 whole_interview.append([index, current_speaker,
                                                     current_text])
-                # current_text = ""
-                # current_speaker = ""
-        # print(whole_interview)
+    
         for i in whole_interview:
             print(i)
 
