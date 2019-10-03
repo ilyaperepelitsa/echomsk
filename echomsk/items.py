@@ -20,22 +20,8 @@ class InterviewParagraph(Item):
 
     index = Field()
     speaker = Field()
-    job_lists = Field()
-    job_apply_link = Field()
-    job_apply_text = Field()
+    text = Field()
 
-    company_website = Field()
-    company_size = Field()
-    company_type = Field()
-    company_revenue = Field()
-    company_headquarters = Field()
-    company_founded = Field()
-    company_industry = Field()
-    company_description = Field()
-
-    rating_rating = Field()
-    rating_recommend = Field()
-    rating_approve = Field()
-
+    
 
     pass
