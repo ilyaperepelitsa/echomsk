@@ -37,13 +37,13 @@ class InterviewParagraph(Base_item):
     host_name = Column(VARCHAR(50), unique = False)
     index = Column(INTEGER, nullable=True)
 
-    speaker = Column(VARCHAR(50), unique = False)
+    speaker = Column(VARCHAR(30), unique = False)
     paragraph = Column(TEXT, nullable=True)
 
     def __repr__(self):
         return "<Base_item(id='%s', date='%s', guest_name='%s',\
                         guest_title='%s', host_name='%s', index='%s',\
-                        speaker='%s', subtitle='%s',\
+                        speaker='%s', paragraph='%s',\
                         title_pos='%s',\
                         video_list_size='%s', basic_index='%s',\
                         terminal_title='%s', terminal_title_pos='%s')>"\
