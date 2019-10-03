@@ -12,9 +12,9 @@ class EchomskPipeline(object):
         data_entry = {"date" : item["date"],
                         "guest_name" : item["guest_name"],
                         "guest_title" : item["guest_title"],
-                        "host_name" : item["url"],
-                        "index" : item["match_name"],
-                        "speaker" : item["title"],
+                        "host_name" : item["host_name"],
+                        "index" : item["index"],
+                        "speaker" : item["speaker"],
                         "text" : item["subtitle"],
                         "url" : item["title_pos"]
                         }
