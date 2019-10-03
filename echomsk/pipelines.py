@@ -19,12 +19,13 @@ class EchomskPipeline(object):
 
         try:
             guest_name = item["guest_name"][0]
-except:
-    date = None
+        except:
+            date = None
 
         try:
             guest_title = item["guest_title"][0]
-
+        except:
+            date = None
 
         try:
             host_name = item["host_name"][0]
