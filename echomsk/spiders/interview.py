@@ -14,7 +14,7 @@ def clean_chunk(text):
     chunk = [i for i in chunk if len(i) > 1]
     return chunk
 
-class InterviewSpider(scrapy.CrawlSpider):
+class InterviewSpider(CrawlSpider):
     name = 'interview'
     # allowed_domains = ['echo.msk.ru']
     start_urls = ['https://echo.msk.ru/programs/personalno/']
@@ -40,11 +40,11 @@ class InterviewSpider(scrapy.CrawlSpider):
 
 
 
-    def parse(self, response):
-        # print(self.rules)
-        # print(response.url)
-        # print(response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]//@href').getall())
-        pass
+    # def parse(self, response):
+    #     # print(self.rules)
+    #     # print(response.url)
+    #     # print(response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]//@href').getall())
+    #     pass
 
     def parse_interview(self, response):
         # # date
