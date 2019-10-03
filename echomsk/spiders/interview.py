@@ -11,4 +11,6 @@ class InterviewSpider(scrapy.Spider):
         pass
 
     def parse_interview(self, response):
+        
+        response.xpath('//div[@class="date left"]//strong/text()').get()
         pass
