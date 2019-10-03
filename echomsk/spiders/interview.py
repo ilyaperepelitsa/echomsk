@@ -86,7 +86,7 @@ class InterviewSpider(CrawlSpider):
                 # current_speaker = ""
         # print(whole_interview)
         for i , k in enumerate(in whole_interview):
-            print(str(i) + )
+            print(str(i) + "__  " + k)
 
 
 
