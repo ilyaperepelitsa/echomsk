@@ -40,12 +40,12 @@ class EchomskPipeline(object):
         try:
             speaker = item["speaker"][0]
         except:
-            date = None
+            speaker = None
 
         try:
             text = item["text"][0]
         except:
-            date = None
+            text = None
 
         try:
             url = item["url"][0]
