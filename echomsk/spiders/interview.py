@@ -57,8 +57,8 @@ class InterviewSpider(CrawlSpider):
         broadcast_date = datetime.datetime.strptime(broadcast_date, u'%d %B %Y')
         print(broadcast_date.date())
 
-        # # guest name
-        # response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
+        # guest name
+        response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
         # # guest title
         # response.xpath('//div[contains(@class, "author")]//*[@class="post"]/text()').get()
         # # host name
