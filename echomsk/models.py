@@ -42,7 +42,7 @@ class InterviewParagraph(Base_item):
 
     def __repr__(self):
         return "<Base_item(id='%s', date='%s', guest_name='%s',\
-                        guest_title='%s', url='%s', match_name='%s',\
+                        guest_title='%s', host_name='%s', match_name='%s',\
                         title='%s', subtitle='%s',\
                         title_pos='%s',\
                         video_list_size='%s', basic_index='%s',\
