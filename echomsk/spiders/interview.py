@@ -16,7 +16,7 @@ def clean_chunk(text):
 
 class InterviewSpider(scrapy.Spider):
     name = 'interview'
-    allowed_domains = ['*']
+    # allowed_domains = ['*']
     start_urls = ['https://echo.msk.ru/programs/personalno/']
 
     rules = [
