@@ -11,7 +11,7 @@ class EchomskPipeline(object):
         return item
 
 
-class APIDataPipeline(object):
+class EchomskPipeline(object):
     def process_item(self, item, spider):
 
         data_entry = {"bmid" : item["bmid"],
