@@ -55,7 +55,6 @@ class InterviewSpider(CrawlSpider):
         broadcast_date = response.xpath('//div[@class="date left"]//strong/text()').get()
         locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
         broadcast_date = datetime.datetime.strptime(broadcast_date, u'%d %B %Y').date()
-        print(broadcast_date.date())
 
         # guest name
         guest_name = response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
@@ -97,9 +96,9 @@ class InterviewSpider(CrawlSpider):
                 # current_text = ""
                 # current_speaker = ""
         # print(whole_interview)
-        for i in whole_interview:
-            # print(i)
-            pass
+        # for i in whole_interview:
+        #     # print(i)
+        #     pass
 
 
 
