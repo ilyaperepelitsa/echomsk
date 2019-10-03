@@ -76,7 +76,7 @@ class InterviewSpider(CrawlSpider):
                     InterviewParagraph.broadcast_date == broadcast_date,
                     InterviewParagraph.guest_name == guest_name
                     ))).scalar()
-        if not 
+        if not interview_exists:
         text = response.xpath('//div[@class="mmplayer"]//p').getall()
         whole_interview = []
         current_text = ""
