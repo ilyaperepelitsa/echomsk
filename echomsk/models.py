@@ -47,8 +47,7 @@ class InterviewParagraph(Base_item):
         %(self.id, self.date, self.guest_name,
             self.guest_title,
             self.host_name, self.index,
-            self.speaker, self.subtitle,
-            self.title_pos)
+            self.speaker, self.paragraph)
 
 
 # class FailedBMIDs(Base_item):
