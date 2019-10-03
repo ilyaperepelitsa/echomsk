@@ -22,18 +22,19 @@ class InterviewSpider(scrapy.Spider):
     rules = [
         Rule(
             LinkExtractor(
+                restrict_xpaths 
                 canonicalize=True,
                 unique=True
             ),
             follow=True,
             callback="parse_page"),
-            Rule(
-                LinkExtractor(
-                    canonicalize=True,
-                    unique=True
-                ),
-                follow=True,
-                callback="parse_page"),
+        Rule(
+            LinkExtractor(
+                canonicalize=True,
+                unique=True
+            ),
+            follow=True,
+            callback="parse_page"),
     ]
 
 
