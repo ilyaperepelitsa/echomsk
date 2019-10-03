@@ -13,8 +13,8 @@ import re
 from scrapy.loader import ItemLoader
 import json
 from echomsk.items import ApiItem
-from lolmath.models import *
-from lolmath.functions import *
+from echomsk.models import *
+from echomsk.functions import *
 
 from sqlalchemy import and_
 
