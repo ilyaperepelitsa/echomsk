@@ -125,22 +125,22 @@ class InterviewSpider(CrawlSpider):
             print(entry['guest_name'])
             print(len(entry['interview']))
 
-            if len(entry['interview']) 
+            if len(entry['interview']) > 10:
 
-            for i in entry['interview']:
-                interview_item = ItemLoader(item = ApiItem(), response = response)
-                interview_item['date'] = entry['date']
-                interview_item['guest_name'] = entry['guest_name']
-                interview_item['guest_title'] = entry['guest_title']
-                interview_item['host_name'] = entry['host_name']
-                interview_item['index'] = int(i[0])
-                interview_item['speaker'] = str(i[1])
-                interview_item['paragraph'] = str(i[2])
-                # .encode('ascii','ignore')
-                interview_item['url'] = respone.url()
+                for i in entry['interview']:
+                    interview_item = ItemLoader(item = ApiItem(), response = response)
+                    interview_item['date'] = entry['date']
+                    interview_item['guest_name'] = entry['guest_name']
+                    interview_item['guest_title'] = entry['guest_title']
+                    interview_item['host_name'] = entry['host_name']
+                    interview_item['index'] = int(i[0])
+                    interview_item['speaker'] = str(i[1])
+                    interview_item['paragraph'] = str(i[2])
+                    # .encode('ascii','ignore')
+                    interview_item['url'] = respone.url()
 
-                item = interview_item.load_item()
-                yield item
+                    item = interview_item.load_item()
+                    yield item
 
 
 
