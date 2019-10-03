@@ -125,7 +125,21 @@ class InterviewSpider(CrawlSpider):
             print(entry['guest_name'])
             print(len(entry['interview']))
 
-            for i in entry['']
+            for i in entry['whole_interview']:
+                interview_ = ItemLoader(item = ApiItem(), response = response)
+                video_item.add_value('bmid', meta['bmid'])
+                video_item.add_value('nid', meta['nid'])
+                video_item.add_value('total_games', meta['total_games'])
+                video_item.add_value('url', meta['url'])
+                video_item.add_value('match_name', meta['match_name'])
+                video_item.add_value('title', meta['title'])
+                video_item.add_value('subtitle', meta['subtitle'])
+                video_item.add_value('title_pos', meta['title_pos'])
+                video_item.add_value('video_list_size', meta['video_list_size'])
+                video_item.add_value('basic_index', meta['basic_index'])
+                video_item.add_xpath("terminal_title", '//title/text()')
+                item = video_item.load_item()
+                yield item
 
 
 
