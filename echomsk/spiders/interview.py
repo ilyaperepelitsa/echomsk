@@ -24,4 +24,5 @@ class InterviewSpider(scrapy.Spider):
         text = [i.replace('\r\n', '').strip() for i in text]
         # text = [i for i in text if i != "\r\n"]
         text = [i for i in text if len(i) > 1]
+        re.sub(r'(?is)</html>.+', '</html>', article)
         pass
