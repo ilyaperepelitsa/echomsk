@@ -100,7 +100,7 @@ class InterviewSpider(CrawlSpider):
         #     # print(i)
         #     pass
 
-        print({"date": broadcast_date,
+        entry = {"date": broadcast_date,
                 "guest_name" : guest_name,
                 "guest_title" : guest_title,
                 "sadasd" : ,
