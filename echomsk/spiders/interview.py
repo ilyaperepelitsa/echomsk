@@ -125,7 +125,7 @@ class InterviewSpider(CrawlSpider):
             print(entry['guest_name'])
             print(len(entry['interview']))
 
-            f
+            for i in entry
 
 
 
