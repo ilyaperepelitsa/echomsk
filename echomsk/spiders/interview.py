@@ -24,7 +24,7 @@ class InterviewSpider(scrapy.Spider):
             LinkExtractor(
                 restrict_xpaths = '//*[@class="pager"]',
                 # canonicalize=True,
-                unique=True
+                unique=True,
                 callback="parse_interview"
             ),
             follow=True),
@@ -41,6 +41,7 @@ class InterviewSpider(scrapy.Spider):
 
 
     def parse(self, response):
+        print(respons)
         pass
 
     def parse_interview(self, response):
