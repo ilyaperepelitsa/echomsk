@@ -26,7 +26,7 @@ class InterviewSpider(scrapy.Spider):
                 canonicalize = True,
                 unique=True
             ),
-            follow=True,),
+            follow=True),
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
@@ -42,7 +42,7 @@ class InterviewSpider(scrapy.Spider):
 
     def parse(self, response):
         # print(self.rules)
-        print(response.url)
+        # print(response.url)
         # print(response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]//@href').getall())
         pass
 
