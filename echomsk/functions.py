@@ -3,7 +3,7 @@ from random import randint
 # from sqlalchemy.sql import select
 from sqlalchemy.sql import exists
 from sqlalchemy import and_
-from echom.models import Errors, DupUrlErrors
+from echomsk.models import Errors, DupUrlErrors
 
 
 def random_with_N_digits(n):
