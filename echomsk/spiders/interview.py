@@ -43,14 +43,14 @@ class InterviewSpider(scrapy.Spider):
         pass
 
     def parse_interview(self, response):
-        # date
-        response.xpath('//div[@class="date left"]//strong/text()').get()
-        # guest name
-        response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
-        # guest title
-        response.xpath('//div[contains(@class, "author")]//*[@class="post"]/text()').get()
-        # host name
-        //div[contains(@class, "lead")]//a//text()
+        # # date
+        # response.xpath('//div[@class="date left"]//strong/text()').get()
+        # # guest name
+        # response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
+        # # guest title
+        # response.xpath('//div[contains(@class, "author")]//*[@class="post"]/text()').get()
+        # # host name
+        # //div[contains(@class, "lead")]//a//text()
 
         text = response.xpath('//div[@class="mmcontainer"]//p').getall()
         whole_interview = []
