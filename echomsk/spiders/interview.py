@@ -22,7 +22,7 @@ class InterviewSpider(scrapy.Spider):
     rules = [
         Rule(
             LinkExtractor(
-                restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="text"]'
+                restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//div[@class="text"]'
                                     //*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]
                 canonicalize=True,
                 unique=True
