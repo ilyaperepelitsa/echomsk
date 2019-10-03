@@ -62,8 +62,8 @@ class InterviewSpider(CrawlSpider):
         # # guest title
         guest_title = response.xpath('//div[contains(@class, "author")]//*[@class="post"]/text()').get()
         # # host name
-        response.xpath('//div[contains(@class, "author")]//*[@class="post"]/text()').get()
-        host_name = //div[contains(@class, "lead")]//a//text()
+        response.xpath('//div[contains(@class, "lead")]//a//text()').get()
+        host_name =
 
         text = response.xpath('//div[@class="mmplayer"]//p').getall()
         whole_interview = []
