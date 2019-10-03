@@ -76,7 +76,7 @@ class InterviewSpider(scrapy.Spider):
                                                     current_text))
                 # current_text = ""
                 # current_speaker = ""
-        print(whole_interview)
+        print(len(whole_interview))
 
 
 
