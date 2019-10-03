@@ -10,8 +10,8 @@ class EchomskPipeline(object):
     def process_item(self, item, spider):
 
         data_entry = {"date" : item["bmid"],
-                        "nid" : item["nid"],
-                        "total_games" : item["total_games"],
+                        "guest_name" : item["nid"],
+                        "guest_title" : item["total_games"],
                         "url" : item["url"],
                         "match_name" : item["match_name"],
                         "title" : item["title"],
