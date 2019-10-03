@@ -15,8 +15,7 @@ class InterviewParagraph(Item):
     date = Field()
     guest_name = Field()
 
-
-    job_position = Field()
+    guest_title = Field()
     job_salary_med = Field()
     job_company = Field()
     job_text = Field()
