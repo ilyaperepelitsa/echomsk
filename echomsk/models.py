@@ -47,8 +47,8 @@ class InterviewParagraph(Base_item):
                         title_pos='%s',\
                         video_list_size='%s', basic_index='%s',\
                         terminal_title='%s', terminal_title_pos='%s')>"\
-        %(self.id, self.date, self.nid,
-            self.total_games,
+        %(self.id, self.date, self.guest_name,
+            self.guest_title,
             self.url, self.match_name,
             self.title, self.subtitle,
             self.title_pos)
