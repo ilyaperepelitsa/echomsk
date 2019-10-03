@@ -53,8 +53,9 @@ class InterviewSpider(scrapy.Spider):
             else:
                 whole_interview.append(tuple(index, current_speaker,
                                                     current_text))
-                current_text = ""
-                current_speaker = ""
+                # current_text = ""
+                # current_speaker = ""
+            
 
 
 
