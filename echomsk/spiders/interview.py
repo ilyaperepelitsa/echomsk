@@ -96,12 +96,12 @@ class InterviewSpider(scrapy.Spider):
 # pew = ['a', 'b', 'c', 'd']
 # pew[::2]
 # pew[1::2]
-
-
-response.xpath('//div[@class = "content")]\
-                //div[@class = "rel")]\
-                //div[contains(@class, "preview")]').get()
-
-
-
-response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//p[@class="text"]').get()
+#
+#
+# response.xpath('//div[@class = "content")]\
+#                 //div[@class = "rel")]\
+#                 //div[contains(@class, "preview")]').get()
+#
+#
+#
+# response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//p[@class="text"]').get()
