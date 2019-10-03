@@ -14,7 +14,7 @@ class EchomskPipeline(object):
 
         try:
             date = item["date"][0]
-
+        ec
 
         try:
             guest_name = item["guest_name"][0]
@@ -35,8 +35,10 @@ class EchomskPipeline(object):
         try:
             speaker = item["speaker"][0]
 
+
         try:
             text = item["text"][0]
+
 
         try:
             url = item["url"][0]
