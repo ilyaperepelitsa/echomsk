@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
+impor
 from scrapy.selector import Selector
 
 from scrapy.linkextractor import LinkExtractor
@@ -79,7 +80,7 @@ class InterviewSpider(CrawlSpider):
                         whole_interview.append([index, current_speaker,
                                                             current_text])
                     else:
-                        whole_interview[-1][2] = whole_interview[index-1][2] + " " + current_text
+                        whole_interview[-1][2] = whole_interview[-1][2] + " " + current_text
                     current_text = ""
                     current_speaker = ""
                 else:
