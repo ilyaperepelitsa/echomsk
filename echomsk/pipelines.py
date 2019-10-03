@@ -13,14 +13,14 @@ class EchomskPipeline(object):
     def process_item(self, item, spider):
 
 
-                        date = item["date"][0],
-                        guest_name = item["guest_name"][0],
-                        guest_title = item["guest_title"][0],
-                        host_name = item["host_name"][0],
-                        index = item["index"][0],
-                        speaker = item["speaker"][0],
-                        text : item["text"][0],
-                        url : item["url"][0]
+        date = item["date"][0],
+        guest_name = item["guest_name"][0],
+        guest_title = item["guest_title"][0],
+        host_name = item["host_name"][0],
+        index = item["index"][0],
+        speaker = item["speaker"][0],
+        text = item["text"][0],
+        url = item["url"][0]
 
 
         data_entry = {"date" = item["date"][0],
