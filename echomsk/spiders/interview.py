@@ -7,7 +7,7 @@ from scrapy.spiders import Rule, CrawlSpider
 import re
 
 def clean_chunk(text):
-    
+
     chunk = Selector(text=text).xpath('//text()').getall()
     chunk = [i.replace('\r\n', '').strip() for i in chunk]
     chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in chunk]
@@ -62,6 +62,7 @@ class InterviewSpider(CrawlSpider):
         current_text = ""
         current_speaker = ""
         for index, paragraph in enumerate(text):
+            
             chunk = clean_chunk(paragraph)
             if len(chunk) > 1:
                 current_speaker = chunk[0]
