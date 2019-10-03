@@ -22,6 +22,7 @@ class InterviewSpider(scrapy.Spider):
     rules = [
         Rule(
             LinkExtractor(
+                allow=[r'.*',],
                 restrict_xpaths = '//*[@class="pager"]',
                 # canonicalize=True,
                 unique=True
@@ -45,8 +46,8 @@ class InterviewSpider(scrapy.Spider):
 
     def parse(self, response):
         # print(response.url)
-        print(response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]//@href').getall())
-        # pass
+        # print(response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]//@href').getall())
+        pass
 
     def parse_interview(self, response):
         # # date
