@@ -38,7 +38,7 @@ class InterviewParagraph(Base_item):
     index = Column(INTEGER, nullable=True)
 
     speaker = Column(VARCHAR(30), unique = False)
-    paragraph = Column(TEXT, nullable=True)
+    text = Column(TEXT, nullable=True)
 
     url = Column(TEXT, nullable=True)
 
