@@ -9,18 +9,14 @@
 class EchomskPipeline(object):
     def process_item(self, item, spider):
 
-        data_entry = {"date" : item["bmid"],
+        data_entry = {"date" : item["date"],
                         "guest_name" : item["nid"],
                         "guest_title" : item["total_games"],
                         "host_name" : item["url"],
                         "index" : item["match_name"],
                         "speaker" : item["title"],
                         "text" : item["subtitle"],
-                        "url" : item["title_pos"],
-                        "video_list_size" : item["video_list_size"],
-                        "basic_index" : item["basic_index"],
-                        "terminal_title" : item["terminal_title"],
-                        "terminal_title_pos" : item["terminal_title_pos"]
+                        "url" : item["title_pos"]
                         }
 
         # data_exists = session_test.query(exists().where(
