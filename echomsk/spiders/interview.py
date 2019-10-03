@@ -13,7 +13,7 @@ def clean_chunk(text):
 class InterviewSpider(scrapy.Spider):
     name = 'interview'
     allowed_domains = ['echo.msk.ru']
-    start_urls = ['http://echo.msk.ru/']
+    start_urls = ['https://echo.msk.ru/programs/personalno/']
 
     def parse(self, response):
         pass
@@ -55,7 +55,7 @@ class InterviewSpider(scrapy.Spider):
                                                     current_text))
                 # current_text = ""
                 # current_speaker = ""
-        print(whole)
+        print(whole_interview)
 
 
 
