@@ -43,7 +43,8 @@ class InterviewSpider(scrapy.Spider):
 
 
     def parse(self, response):
-        print(response.url)
+        # print(response.url)
+        response.xpath('//div[@class="mmcontainer"]//p').getall()
         # pass
 
     def parse_interview(self, response):
