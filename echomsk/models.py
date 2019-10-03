@@ -28,7 +28,7 @@ Base_item = declarative_base()
 #         %(self.id, self.bmid,
 #             self.nid, self.url)
 
-class VideoUrlEntry(Base_item):
+class InterviewParagraph(Base_item):
     __tablename__ = "video_url_entries"
     id = Column(INTEGER, primary_key = True)
     bmid = Column(VARCHAR(10), nullable=False)
