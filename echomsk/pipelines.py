@@ -31,7 +31,7 @@ class EchomskPipeline(object):
 
 
 
-        adding_data = VideoUrlEntry(**data_entry)
+        adding_data = InterviewParagraph(**data_entry)
         session_test.add(adding_data)
         session_test.commit()
         return item
