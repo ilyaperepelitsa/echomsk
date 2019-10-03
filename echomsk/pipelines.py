@@ -57,7 +57,7 @@ class EchomskPipeline(object):
                         "guest_title" : guest_title,
                         "host_name" : host_name,
                         "index" : index,
-                        "speaker" : item["speaker"][0],
+                        "speaker" : speaker"][0],
                         "text" : item["text"][0],
                         "url" : item["url"][0]
                         }
