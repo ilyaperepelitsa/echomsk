@@ -100,6 +100,8 @@ class InterviewSpider(CrawlSpider):
         #     # print(i)
         #     pass
 
+        print({""})
+
 
 
 
