@@ -25,6 +25,7 @@ class InterviewSpider(scrapy.Spider):
         current_text = ""
         current_speaker = ""
         for index, paragraph in enumerate(text):
+            
 
 
         # text = [i.replace('\r\n', '').strip() for i in text]
