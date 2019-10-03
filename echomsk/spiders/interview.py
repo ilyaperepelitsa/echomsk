@@ -23,7 +23,7 @@ class InterviewSpider(scrapy.Spider):
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
-                canonicalize=True,
+                # canonicalize=True,
                 unique=True
             ),
             follow=True,
@@ -31,7 +31,7 @@ class InterviewSpider(scrapy.Spider):
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="pager"]//a[@class="next"]',
-                canonicalize=True,
+                # canonicalize=True,
                 unique=True
             ),
             follow=True,
