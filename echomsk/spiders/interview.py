@@ -130,7 +130,7 @@ class InterviewSpider(CrawlSpider):
                 interview_item['date'] = entry['date']
                 interview_item['guest_name'] = entry['guest_name']
                 interview_item['guest_title'] = entry['guest_title']
-                interview_item['date'] = entry['date']
+                interview_item['host_name'] = entry['host_name']
                 interview_item['date'] = entry['date']
                 interview_item['date'] = entry['date']
                 interview_item['date'] = entry['date']
