@@ -34,8 +34,9 @@ class InterviewSpider(scrapy.Spider):
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
                 # canonicalize=True,
                 unique=True,
-                callback="parse_interview"
+
             ),
+            callback="parse_interview"
             follow=True,
             )
 
