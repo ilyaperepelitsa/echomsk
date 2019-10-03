@@ -74,7 +74,7 @@ class InterviewSpider(CrawlSpider):
 
         nid_error_exists = session_test.query(exists().where(and_(
                     InterviewParagraph.broadcast_date == broadcast_date,
-                    InterviewParagraph.error_type == 'newsId not extracted'
+                    InterviewParagraph.error_type == guest_name
                     ))).scalar()
 
         text = response.xpath('//div[@class="mmplayer"]//p').getall()
