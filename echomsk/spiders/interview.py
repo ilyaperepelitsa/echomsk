@@ -140,6 +140,7 @@ class InterviewSpider(CrawlSpider):
                     interview_item.add_value('index', int(i[0]))
                     interview_item.add_value('speaker', str(i[1]))
                     interview_item.add_value('text', str(i[2]).decode('utf-8', 'ignore'))
+                    # interview_item.add_value('text', str(i[2]).decode('utf-8', 'ignore'))
                     interview_item.add_value('url', response.url)
 
                     item = interview_item.load_item()
