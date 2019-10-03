@@ -64,7 +64,7 @@ class InterviewSpider(CrawlSpider):
         for index, paragraph in enumerate(text):
             chunk = Selector(text=text).xpath('//*').getall()
             for i in chunk:
-                print
+                print(i.xpath)
             # chunk_name = chnk.xpath('name()')
             print(paragraph)
         #
