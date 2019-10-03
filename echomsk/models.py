@@ -46,7 +46,7 @@ class InterviewParagraph(Base_item):
                         speaker='%s', paragraph='%s')>"\
         %(self.id, self.date, self.guest_name,
             self.guest_title,
-            self.url, self.match_name,
+            self.host_name, self.match_name,
             self.title, self.subtitle,
             self.title_pos)
 
