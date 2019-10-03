@@ -33,7 +33,7 @@ class InterviewParagraph(Base_item):
     id = Column(INTEGER, primary_key = True)
     date = Column(Date, nullable=False)
     guest_name = Column(VARCHAR(50), nullable=True)
-    total_games = Column(INTEGER, nullable=True)
+    guest_title = Column(INTEGER, nullable=True)
     url = Column(TEXT, unique = False)
     match_name = Column(TEXT, unique = False, nullable=True)
     title = Column(TEXT, unique = False, nullable=True)
