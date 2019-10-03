@@ -34,4 +34,4 @@ class EchomskPipeline(object):
         adding_data = InterviewParagraph(**data_entry)
         session_test.add(adding_data)
         session_test.commit()
-        return item
+        # return item
