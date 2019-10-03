@@ -37,6 +37,7 @@ class InterviewParagraph(Base_item):
     host_name = Column(VARCHAR(50), unique = False)
     index = Column(INTEGER, nullable=True)
 
+    host_name = Column(VARCHAR(50), unique = False)
 
     match_name = Column(TEXT, unique = False, nullable=True)
     title = Column(TEXT, unique = False, nullable=True)
