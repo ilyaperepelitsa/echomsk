@@ -133,8 +133,8 @@ class InterviewSpider(CrawlSpider):
                     interview_item = ItemLoader(item = InterviewParagraph(), response = response)
 
                     interview_item.add_value('date', meta['date'])
-                    [''] = entry['date']
-                    interview_item.add_value('bmid', meta['bmid'])
+
+                    interview_item.add_value('guest_name', meta['guest_name'])
                     ['guest_name'] = entry['guest_name']
                     interview_item.add_value('bmid', meta['bmid'])
                     ['guest_title'] = entry['guest_title']
