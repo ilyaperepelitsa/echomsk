@@ -57,7 +57,7 @@ class InterviewSpider(CrawlSpider):
         # # host name
         # //div[contains(@class, "lead")]//a//text()
 
-        text = response.xpath('//div[@class="mmplayer"]//div[contains(@class, "typical")]/p//text()').getall()
+        text = response.xpath('//div[@class="mmplayer"]//p//text()').getall()
         whole_interview = []
         current_text = ""
         current_speaker = ""
