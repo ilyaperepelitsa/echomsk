@@ -27,8 +27,10 @@ class EchomskPipeline(object):
         try:
             host_name = item["host_name"][0]
 
+
         try:
             index = item["index"][0]
+
 
         try:
             speaker = item["speaker"][0]
