@@ -120,10 +120,6 @@ class InterviewSpider(CrawlSpider):
                     "host_name" : host_name,
                     "interview" : whole_interview,
                     }
-            print("=======================================")
-            print(entry['date'])
-            print(entry['guest_name'])
-            print(len(entry['interview']))
 
             if len(entry['interview']) > 10:
 
