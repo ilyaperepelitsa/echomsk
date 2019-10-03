@@ -80,5 +80,4 @@ response.xpath('//div[@class = "content")]\
 
 
 
-response.xpath('//div[@class = "content")]\
-                //div[@class = "rel")]//div[contains(@class, "preview")]').get()
+response.xpath('//div[@class="content")]//div[@class = "rel")]//div[contains(@class, "preview")]').get()
