@@ -12,7 +12,7 @@ import re
 
 from scrapy.loader import ItemLoader
 import json
-from echomsk.items import ApiItem
+from echomsk.items import InterviewParagraph
 from echomsk.models import *
 from echomsk.functions import *
 
