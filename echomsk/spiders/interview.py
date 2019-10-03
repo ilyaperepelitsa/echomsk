@@ -101,7 +101,11 @@ class InterviewSpider(CrawlSpider):
         #     pass
 
         print({"date": ,
-                "sadasd" : })
+                "sadasd" : ,
+                "sadasd" : ,
+                "sadasd" : ,
+                "sadasd" : ,
+                })
 
 
 
