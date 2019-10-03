@@ -40,10 +40,10 @@ class InterviewSpider(scrapy.Spider):
 
             next_chunk = text[index + 1]
             next_chunk = Selector(text=next_chunk).xpath('//text()').getall()
-            chunk = [i.replace('\r\n', '').strip() for i in next_chunk]
-            chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in next_chunk]
-            chunk = [i.strip() for i in chunk]
-            chunk = [i for i in chunk if len(i) > 1]
+            next_chunk = [i.replace('\r\n', '').strip() for i in next_chunk]
+            next_chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in next_chunk]
+            next_chunk = [i.strip() for i in chunk]
+            next_chunk = [i for i in chunk if len(i) > 1]
 
             if index < len(text) and text[index + 1]
 
