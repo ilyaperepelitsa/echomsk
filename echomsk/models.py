@@ -40,6 +40,8 @@ class InterviewParagraph(Base_item):
     speaker = Column(VARCHAR(30), unique = False)
     paragraph = Column(TEXT, nullable=True)
 
+    guest_title = Column(TEXT, nullable=True)
+
     def __repr__(self):
         return "<Base_item(id='%s', date='%s', guest_name='%s',\
                         guest_title='%s', host_name='%s', index='%s',\
