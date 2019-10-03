@@ -9,6 +9,15 @@ from scrapy.linkextractor import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 import re
 
+
+from scrapy.loader import ItemLoader
+import json
+from lolmath.items import ApiItem
+from lolmath.models import *
+from lolmath.functions import *
+
+from sqlalchemy import and_
+
 def clean_chunk(text):
 
     chunk = Selector(text=text).xpath('//text()').getall()
