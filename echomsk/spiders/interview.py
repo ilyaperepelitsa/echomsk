@@ -28,14 +28,14 @@ class InterviewSpider(scrapy.Spider):
             ),
             follow=True,
             callback="parse_interview"),
-        # Rule(
-        #     LinkExtractor(
-        #         restrict_xpaths = '//*[@class="pager"]//a[@class="next"]',
-        #         canonicalize=True,
-        #         unique=True
-        #     ),
-        #     follow=True,
-        #     callback="parse"),
+        Rule(
+            LinkExtractor(
+                restrict_xpaths = '//*[@class="pager"]//a[@class="next"]',
+                canonicalize=True,
+                unique=True
+            ),
+            follow=True,
+            callback="parse"),
     ]
 
 
