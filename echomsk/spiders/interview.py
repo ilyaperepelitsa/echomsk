@@ -42,7 +42,7 @@ class InterviewSpider(scrapy.Spider):
                 current_text += chunk[0]
 
 
-            next_chunk = text[index + 1]
+            next_chunk = clean
             next_chunk = Selector(text=next_chunk).xpath('//text()').getall()
             next_chunk = [i.replace('\r\n', '').strip() for i in next_chunk]
             next_chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in next_chunk]
