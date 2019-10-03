@@ -14,9 +14,10 @@ class InterviewParagraph(Item):
     # Meta data
     date = Field()
     guest_name = Field()
-
     guest_title = Field()
-    job_salary_med = Field()
+
+    host_name = Field()
+    
     job_company = Field()
     job_text = Field()
     job_lists = Field()
