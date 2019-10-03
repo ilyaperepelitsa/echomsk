@@ -37,6 +37,8 @@ class InterviewSpider(scrapy.Spider):
                 current_text += " "
                 current_text += chunk[0]
 
+
+            ne
             if index < len(text) and text[index + 1]
 
         # text = [i.replace('\r\n', '').strip() for i in text]
