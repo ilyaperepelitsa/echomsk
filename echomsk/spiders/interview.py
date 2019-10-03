@@ -134,7 +134,7 @@ class InterviewSpider(CrawlSpider):
                 interview_item['index'] = i[0]
                 interview_item['speaker'] = i[1]
                 interview_item['paragraph'] = str(i[2])
-                .encode('ascii','ignore')
+                # .encode('ascii','ignore')
                 interview_item['url'] = respone.url()
 
                 item = interview_item.load_item()
