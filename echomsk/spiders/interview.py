@@ -41,9 +41,9 @@ class InterviewSpider(scrapy.Spider):
                 current_text += " "
                 current_text += chunk[0]
 
+            if index < len(text):
+                next_chunk = clean_chunk(text[index + 1])
 
-            next_chunk = clean_chunk(text[index + 1])
-            if index < len(text)
 
         # text = [i.replace('\r\n', '').strip() for i in text]
         # # text = [i for i in text if i != "\r\n"]
