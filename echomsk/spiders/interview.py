@@ -23,7 +23,7 @@ class InterviewSpider(scrapy.Spider):
 
         Rule(
             LinkExtractor(
-                allow = "*/",
+                allow = ".",
                 unique=True
             ), callback="parse")
 
