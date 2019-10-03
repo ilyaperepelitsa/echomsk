@@ -55,7 +55,7 @@ class EchomskPipeline(object):
         data_entry = {"date" = date,
                         "guest_name" : guest_name,
                         "guest_title" : guest_title,
-                        "host_name" : host_name"][0],
+                        "host_name" : host_name,
                         "index" : item["index"][0],
                         "speaker" : item["speaker"][0],
                         "text" : item["text"][0],
