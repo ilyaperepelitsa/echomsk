@@ -8,11 +8,6 @@
 
 class EchomskPipeline(object):
     def process_item(self, item, spider):
-        return item
-
-
-class EchomskPipeline(object):
-    def process_item(self, item, spider):
 
         data_entry = {"bmid" : item["bmid"],
                         "nid" : item["nid"],
@@ -41,3 +36,16 @@ class EchomskPipeline(object):
         session_test.add(adding_data)
         session_test.commit()
         return item
+
+
+    date = Field()
+    guest_name = Field()
+    guest_title = Field()
+
+    host_name = Field()
+
+    index = Field()
+    speaker = Field()
+    text = Field()
+    url = Field()
+    pass
