@@ -14,7 +14,8 @@ class EchomskPipeline(object):
 
         try:
             date = item["date"][0]
-        ec
+        except:
+            date = 
 
         try:
             guest_name = item["guest_name"][0]
