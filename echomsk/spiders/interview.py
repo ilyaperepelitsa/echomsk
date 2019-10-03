@@ -86,7 +86,7 @@ class InterviewSpider(scrapy.Spider):
         # text = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in text]
         # text = [i.strip() for i in text]
         # text = [i for i in text if len(i) > 1]
-        pass
+        # pass
 
 
 
