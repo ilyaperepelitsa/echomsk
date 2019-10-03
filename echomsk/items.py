@@ -7,8 +7,35 @@
 
 import scrapy
 
+from scrapy.item import Item, Field
 
-class EchomskItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
+
+class JobItem(Item):
+    # Meta data
+    source = Field()
+    url = Field()
+
+
+    job_position = Field()
+    job_salary_med = Field()
+    job_company = Field()
+    job_text = Field()
+    job_lists = Field()
+    job_apply_link = Field()
+    job_apply_text = Field()
+
+    company_website = Field()
+    company_size = Field()
+    company_type = Field()
+    company_revenue = Field()
+    company_headquarters = Field()
+    company_founded = Field()
+    company_industry = Field()
+    company_description = Field()
+
+    rating_rating = Field()
+    rating_recommend = Field()
+    rating_approve = Field()
+
+
     pass

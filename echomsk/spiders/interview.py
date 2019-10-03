@@ -109,7 +109,7 @@ class InterviewSpider(CrawlSpider):
         print("=======================================")
         print(entry['date'])
         print(entry['guest_name'])
-        print(lentry['interview'])
+        print(len(entry['interview']))
 
 
 
