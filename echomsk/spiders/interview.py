@@ -76,4 +76,4 @@ class InterviewSpider(scrapy.Spider):
 
 response.xpath('//div[@class = "content")]\
                 //div[@class = "rel")]\
-                //div[contains(@class, "author")]').get()
+                //div[contains(@class, "preview")]').get()
