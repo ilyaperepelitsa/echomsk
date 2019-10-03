@@ -22,5 +22,5 @@ class InterviewSpider(scrapy.Spider):
 
         text = response.xpath('//div[@class="mmcontainer"]//p//text()').getall()
         text = [i for i in text if i != "\r\n"]
-        text = [i for i in text if i != "\r\n"]
+        text = [i for i in text if len(i)]
         pass
