@@ -41,8 +41,8 @@ class InterviewSpider(scrapy.Spider):
 
 
     def parse(self, response):
-        print(respons)
-        pass
+        print(response.url)
+        # pass
 
     def parse_interview(self, response):
         # # date
