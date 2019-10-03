@@ -31,4 +31,4 @@ class InterviewSpider(scrapy.Spider):
 
 
 pew = ['a', 'b', 'c', 'd']
-pew[::]
+pew[::2]
