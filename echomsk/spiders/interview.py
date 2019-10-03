@@ -103,8 +103,8 @@ class InterviewSpider(CrawlSpider):
         entry = {"date": broadcast_date,
                 "guest_name" : guest_name,
                 "guest_title" : guest_title,
-                "host_name" : ,
-                "sadasd" : ,
+                "host_name" : host_name,
+                "whole_interview" : whole_interview,
                 }
 
 
