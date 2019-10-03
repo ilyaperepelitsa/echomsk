@@ -7,8 +7,8 @@ class InterviewSpider(scrapy.Spider):
     allowed_domains = ['echo.msk.ru']
     start_urls = ['http://echo.msk.ru/']
 
-    def parse(self, response):
-        pass
+    # def parse(self, response):
+    #     pass
 
     def parse_interview(self, response):
         # date
@@ -37,7 +37,7 @@ class InterviewSpider(scrapy.Spider):
                 current_text += " "
                 current_text += chunk[0]
 
-            if index < len()
+            if index < len(text) and
 
         # text = [i.replace('\r\n', '').strip() for i in text]
         # # text = [i for i in text if i != "\r\n"]
