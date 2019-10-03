@@ -17,8 +17,8 @@ class InterviewParagraph(Item):
     guest_title = Field()
 
     host_name = Field()
-    
-    job_company = Field()
+
+    index = Field()
     job_text = Field()
     job_lists = Field()
     job_apply_link = Field()
