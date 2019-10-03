@@ -40,16 +40,8 @@ class InterviewParagraph(Base_item):
     speaker = Column(VARCHAR(50), unique = False)
     paragraph = Column(TEXT, nullable=True)
 
-    title = Column(TEXT, unique = False, nullable=True)
-    subtitle = Column(TEXT, unique = False, nullable=True)
-
-    video_list_size = Column(INTEGER, nullable=True)
-    basic_index = Column(INTEGER, nullable=True)
-    terminal_title = Column(TEXT, unique = False, nullable=True)
-    terminal_title_pos = Column(INTEGER, nullable=True)
-
     def __repr__(self):
-        return "<Base_item(id='%s', bmid='%s', nid='%s',\
+        return "<Base_item(id='%s', date='%s', nid='%s',\
                         total_games='%s', url='%s', match_name='%s',\
                         title='%s', subtitle='%s',\
                         title_pos='%s',\
