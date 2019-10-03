@@ -4,7 +4,7 @@ from scrapy.selector import Selector
 
 from scrapy.linkextractor import LinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
-
+import re
 
 def clean_chunk(text):
     chunk = Selector(text=text).xpath('//text()').getall()
