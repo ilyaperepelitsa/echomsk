@@ -13,5 +13,7 @@ class InterviewSpider(scrapy.Spider):
     def parse_interview(self, response):
         # date
         response.xpath('//div[@class="date left"]//strong/text()').get()
-        # gue
+        # guest name
+        response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
+        # gues
         pass
