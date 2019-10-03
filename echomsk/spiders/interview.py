@@ -23,7 +23,6 @@ class InterviewSpider(scrapy.Spider):
         text = response.xpath('//div[@class="mmcontainer"]//p//text()').getall()
         text = [i.replace('\r\n', '').strip() for i in text]
         # text = [i for i in text if i != "\r\n"]
-        text = [i for i in text if len(i) > 1]
         text = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in text]
-        text = [i.replace('\r\n', '').strip() for i in text]
+        text = [i.strip() for i in text]
         pass
