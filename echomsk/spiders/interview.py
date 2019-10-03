@@ -77,53 +77,53 @@ class InterviewSpider(CrawlSpider):
                     InterviewParagraph.guest_name == guest_name
                     ))).scalar()
         if not interview_exists:
-        text = response.xpath('//div[@class="mmplayer"]//p').getall()
-        whole_interview = []
-        current_text = ""
-        current_speaker = ""
-        for index, paragraph in enumerate(text):
-            # chunk_name = paragraph.xpath('name()')
+            text = response.xpath('//div[@class="mmplayer"]//p').getall()
+            whole_interview = []
+            current_text = ""
+            current_speaker = ""
+            for index, paragraph in enumerate(text):
+                # chunk_name = paragraph.xpath('name()')
 
-            chunk = clean_chunk(paragraph)
-            if len(chunk) > 1:
-                current_speaker = chunk[0]
-                current_text = chunk[-1]
-            elif len(chunk) == 1:
-                current_text += " "
-                current_text += chunk[0]
+                chunk = clean_chunk(paragraph)
+                if len(chunk) > 1:
+                    current_speaker = chunk[0]
+                    current_text = chunk[-1]
+                elif len(chunk) == 1:
+                    current_text += " "
+                    current_text += chunk[0]
 
-            if (index + 1) < len(text):
-                next_chunk = clean_chunk(text[index + 1])
-                if len(next_chunk) != 1 and len(current_text) > 0:
-                    if len(current_speaker) > 0:
-                        whole_interview.append([index, current_speaker,
-                                                            current_text])
+                if (index + 1) < len(text):
+                    next_chunk = clean_chunk(text[index + 1])
+                    if len(next_chunk) != 1 and len(current_text) > 0:
+                        if len(current_speaker) > 0:
+                            whole_interview.append([index, current_speaker,
+                                                                current_text])
+                        else:
+                            whole_interview[-1][2] = whole_interview[-1][2] + " " + current_text
+                        current_text = ""
+                        current_speaker = ""
                     else:
-                        whole_interview[-1][2] = whole_interview[-1][2] + " " + current_text
-                    current_text = ""
-                    current_speaker = ""
+                        pass
                 else:
-                    pass
-            else:
-                if len(current_text) > 0: whole_interview.append([index, current_speaker,
-                                                    current_text])
-                # current_text = ""
-                # current_speaker = ""
-        # print(whole_interview)
-        # for i in whole_interview:
-        #     # print(i)
-        #     pass
+                    if len(current_text) > 0: whole_interview.append([index, current_speaker,
+                                                        current_text])
+                    # current_text = ""
+                    # current_speaker = ""
+            # print(whole_interview)
+            # for i in whole_interview:
+            #     # print(i)
+            #     pass
 
-        entry = {"date": broadcast_date,
-                "guest_name" : guest_name,
-                "guest_title" : guest_title,
-                "host_name" : host_name,
-                "interview" : whole_interview,
-                }
-        print("=======================================")
-        print(entry['date'])
-        print(entry['guest_name'])
-        print(len(entry['interview']))
+            entry = {"date": broadcast_date,
+                    "guest_name" : guest_name,
+                    "guest_title" : guest_title,
+                    "host_name" : host_name,
+                    "interview" : whole_interview,
+                    }
+            print("=======================================")
+            print(entry['date'])
+            print(entry['guest_name'])
+            print(len(entry['interview']))
 
 
 
