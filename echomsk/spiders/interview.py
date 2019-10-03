@@ -81,13 +81,12 @@ class InterviewSpider(CrawlSpider):
                 else:
                     pass
             else:
-                
                 whole_interview.append(current_text)
                 # current_text = ""
                 # current_speaker = ""
         # print(whole_interview)
         for i , k in enumerate(whole_interview):
-            print(str(i) + "__  " + k)
+            print(str(i) + "__  " + k + )
 
 
 
