@@ -42,7 +42,7 @@ class InterviewSpider(scrapy.Spider):
 
 
     def parse(self, response):
-        print
+        # print(self.rules)
         print(response.url)
         # print(response.xpath('//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]//@href').getall())
         pass
