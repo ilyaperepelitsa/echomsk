@@ -17,5 +17,6 @@ class InterviewSpider(scrapy.Spider):
         response.xpath('//div[contains(@class, "author")]//*[@class="name"]/text()').get()
         # guest title
         response.xpath('//div[contains(@class, "author")]//*[@class="post"]/text()').get()
-        
+        # host name
+        //div[contains(@class, "lead")]//a//text()
         pass
