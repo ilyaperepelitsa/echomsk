@@ -26,7 +26,8 @@ class InterviewSpider(scrapy.Spider):
         current_speaker = ""
         for index, paragraph in enumerate(text):
             chunk = Selector(text=paragraph).xpath('//text()').getall()
-            if len(chunk) > 1
+            if len(chunk) > 1:
+                current_s
 
 
         # text = [i.replace('\r\n', '').strip() for i in text]
