@@ -37,8 +37,7 @@ class InterviewSpider(scrapy.Spider):
 
             ),
             callback="parse_interview"
-            follow=True
-            )
+            follow=True)
 
     ]
 
