@@ -135,10 +135,10 @@ class InterviewSpider(CrawlSpider):
                     interview_item.add_value('date', entry['date'])
 
                     interview_item.add_value('guest_name', entry['guest_name'])
-                    interview_item.add_value('guest_title', entry['guest_title'].replace("\xa0", " "))
-                    interview_item.add_value('host_name', entry['host_name'].replace("\xa0", " "))
+                    interview_item.add_value('guest_title', entry['guest_title'])
+                    interview_item.add_value('host_name', entry['host_name'])
                     interview_item.add_value('index', int(i[0]))
-                    interview_item.add_value('speaker', str(i[1]).replace("\xa0", " "))
+                    interview_item.add_value('speaker', str(i[1]))
                     interview_item.add_value('text', str(i[2]).replace("\xa0", " ").encode('utf-8').decode('utf-8'))
                     # interview_item.add_value('text', str(i[2]).decode('utf-8', 'ignore'))
                     interview_item.add_value('url', response.url)
