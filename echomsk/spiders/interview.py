@@ -33,7 +33,7 @@ class InterviewSpider(scrapy.Spider):
             if len(chunk) > 1:
                 current_speaker = chunk[0]
                 current_text = chunk[-1]
-            elif len(chunk) > 0:
+            elif len(chunk) == 1:
                 current_text += " "
                 current_text += chunk[0]
 
