@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 import scrapy
-impor
+import locale
+import datetime
+
 from scrapy.selector import Selector
 
 from scrapy.linkextractor import LinkExtractor
