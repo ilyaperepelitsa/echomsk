@@ -147,7 +147,8 @@ class InterviewSpider(CrawlSpider):
                     interview_item.add_value('bmid', meta['bmid'])
                     ['paragraph'] = str(i[2])
                     # .encode('ascii','ignore')
-                    interview_item['url'] = respone.url()
+                    interview_item.add_value('bmid', meta['bmid'])
+                    ['url'] = respone.url()
 
                     item = interview_item.load_item()
                     yield item
