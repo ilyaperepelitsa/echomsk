@@ -44,6 +44,7 @@ class InterviewSpider(scrapy.Spider):
             if index < len(text):
                 next_chunk = clean_chunk(text[index + 1])
                 if len(next_chunk) != 1:
+                    whole_interview.a
 
 
 
