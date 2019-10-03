@@ -142,7 +142,7 @@ class InterviewSpider(CrawlSpider):
                     # ['host_name'] = entry['host_name']
                     interview_item.add_value('index', int(i[0]))
                     # ['index'] =
-                    interview_item.add_value('bmid', meta['bmid'])
+                    interview_item.add_value('speaker', str(i[1]))
                     ['speaker'] =
                     interview_item.add_value('bmid', meta['bmid'])
                     ['paragraph'] = str(i[2])
