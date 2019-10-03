@@ -6,7 +6,7 @@ class InterviewSpider(scrapy.Spider):
     name = 'interview'
     allowed_domains = ['echo.msk.ru']
     start_urls = ['http://echo.msk.ru/']
-
+    
     def parse(self, response):
         pass
 
@@ -42,8 +42,8 @@ class InterviewSpider(scrapy.Spider):
             next_chunk = Selector(text=next_chunk).xpath('//text()').getall()
             next_chunk = [i.replace('\r\n', '').strip() for i in next_chunk]
             next_chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in next_chunk]
-            next_chunk = [i.strip() for i in chunk]
-            next_chunk = [i for i in chunk if len(i) > 1]
+            next_chunk = [i.strip() for i in next_chunk]
+            next_chunk = [i for i in next_chunk if len(i) > 1]
 
             if index < len(text) and text[index + 1]
 
