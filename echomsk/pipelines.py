@@ -23,12 +23,12 @@ class EchomskPipeline(object):
                         "terminal_title_pos" : item["terminal_title_pos"]
                         }
 
-        data_exists = session_test.query(exists().where(
-                    VideoUrlEntry.url == data_entry['url']
-                    )).scalar()
-
-        if data_exists:
-            log_url_error(url = item["url"], session = session_test)
+        # data_exists = session_test.query(exists().where(
+        #             VideoUrlEntry.url == data_entry['url']
+        #             )).scalar()
+        #
+        # if data_exists:
+        #     log_url_error(url = item["url"], session = session_test)
 
 
 
@@ -38,14 +38,14 @@ class EchomskPipeline(object):
         return item
 
 
-    date = Field()
-    guest_name = Field()
-    guest_title = Field()
+date = Field()
+guest_name = Field()
+guest_title = Field()
 
-    host_name = Field()
+host_name = Field()
 
-    index = Field()
-    speaker = Field()
-    text = Field()
-    url = Field()
-    pass
+index = Field()
+speaker = Field()
+text = Field()
+url = Field()
+pass
