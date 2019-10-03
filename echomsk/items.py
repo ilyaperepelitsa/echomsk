@@ -10,7 +10,7 @@ import scrapy
 from scrapy.item import Item, Field
 
 
-class JobItem(Item):
+class InterviewPa(Item):
     # Meta data
     source = Field()
     url = Field()
