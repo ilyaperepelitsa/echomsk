@@ -9,3 +9,6 @@ class InterviewSpider(scrapy.Spider):
 
     def parse(self, response):
         pass
+
+    def parse_interview(self, response):
+        pass
