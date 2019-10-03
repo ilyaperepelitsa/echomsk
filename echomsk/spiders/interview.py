@@ -27,7 +27,7 @@ class InterviewSpider(scrapy.Spider):
                 unique=True
             ),
             follow=True,
-            callback="parse_interview"),
+            callback=self.parse_interview"),
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="pager"]//a[@class="next"]',
