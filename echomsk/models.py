@@ -49,7 +49,7 @@ class InterviewParagraph(Base_item):
         %(self.id, self.date, self.guest_name,
             self.guest_title,
             self.host_name, self.index,
-            self.speaker, self.paragraph, self.rl)
+            self.speaker, self.paragraph, self.url)
 
 
 # class FailedBMIDs(Base_item):
