@@ -76,9 +76,10 @@ class InterviewSpider(CrawlSpider):
                 next_chunk = clean_chunk(text[index + 1])
                 if len(next_chunk) != 1 and len(current_text) > 0:
                     if len(current_speaker) > 0:
-                    whole_interview.append([index, current_speaker,
-                                                        current_text])
-
+                        whole_interview.append([index, current_speaker,
+                                                            current_text])
+                    else:
+                        
                     current_text = ""
                     current_speaker = ""
                 else:
