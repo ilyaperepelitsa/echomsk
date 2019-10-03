@@ -10,9 +10,9 @@ import scrapy
 from scrapy.item import Item, Field
 
 
-class InterviewPa(Item):
+class InterviewParagraph(Item):
     # Meta data
-    source = Field()
+    date = Field()
     url = Field()
 
 
