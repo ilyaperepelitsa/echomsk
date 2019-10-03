@@ -26,8 +26,7 @@ class InterviewSpider(scrapy.Spider):
                 canonicalize = True,
                 unique=True
             ),
-            follow=True,
-            callback = "parse"),
+            follow=True,),
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
