@@ -73,7 +73,7 @@ class InterviewSpider(CrawlSpider):
         host_name = response.xpath('//div[contains(@class, "lead")]//a//text()').get()
 
         interview_exists = session_test.query(exists().where(and_(
-                    InterviewParagraph.broadcast_date == broadcast_date,
+                    InterviewParagraph.date == broadcast_date,
                     InterviewParagraph.guest_name == guest_name
                     ))).scalar()
         if not interview_exists:
