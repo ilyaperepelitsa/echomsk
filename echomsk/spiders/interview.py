@@ -10,7 +10,7 @@ def clean_chunk(text):
 
     chunk = Selector(text=text).xpath('//text()').getall()
     chunk = [i.replace('\r\n', '').strip() for i in chunk]
-    chunk = [re.sub(r'^НОВОСТИ|новости|РЕКЛАМА|реклама$', '', i) for i in chunk]
+    chunk = [re.sub(r'^НОВОСТИ|новости|РЕКЛАМА|рекл$', '', i) for i in chunk]
     chunk = [i.strip() for i in chunk]
     chunk = [i for i in chunk if len(i) > 1]
     return chunk
@@ -57,12 +57,12 @@ class InterviewSpider(CrawlSpider):
         # # host name
         # //div[contains(@class, "lead")]//a//text()
 
-        text = response.xpath('//div[@class="mmplayer"]//div[contains(@class, "typical")]//*[not(name()="blockquote")]//text()').getall()
+        text = response.xpath('//div[@class="mmplayer"]//div[contains(@class, "typical")]//*[not(name()="blockquote")]').getall()
         whole_interview = []
         current_text = ""
         current_speaker = ""
         for index, paragraph in enumerate(text):
-            # chunk_name = paragraph.xpath('name()')
+            chunk_name = paragraph.xpath('name()')
 
             chunk = clean_chunk(paragraph)
             if len(chunk) > 1:
@@ -82,7 +82,7 @@ class InterviewSpider(CrawlSpider):
                 else:
                     pass
             else:
-                whole_interview.append([current_speaker,
+                whole_interview.append([index, current_speaker,
                                                     current_text])
                 # current_text = ""
                 # current_speaker = ""
