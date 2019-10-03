@@ -29,8 +29,6 @@ class InterviewSpider(scrapy.Spider):
         callback="parse_page"
     )
 ]
-This rule orders the extraction of...
-
 
 
     def parse(self, response):
