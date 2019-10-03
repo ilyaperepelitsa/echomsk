@@ -130,7 +130,7 @@ class InterviewSpider(CrawlSpider):
 
 
                 for i in entry['interview']:
-                    interview_item = ItemLoader(item = InterviewParagraph(), response = response)
+                    interview_item = ItemLoader(item = InterviewItem(), response = response)
 
                     interview_item.add_value('date', entry['date'])
 
@@ -139,7 +139,7 @@ class InterviewSpider(CrawlSpider):
                     interview_item.add_value('host_name', entry['host_name'])
                     interview_item.add_value('index', int(i[0]))
                     interview_item.add_value('speaker', str(i[1]))
-                    interview_item.add_value('t', str(i[2]))
+                    interview_item.add_value('text', str(i[2]))
                     interview_item.add_value('url', response.url)
 
                     item = interview_item.load_item()
