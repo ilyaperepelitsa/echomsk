@@ -54,7 +54,7 @@ class InterviewSpider(CrawlSpider):
         # # date
         broadcast_date = response.xpath('//div[@class="date left"]//strong/text()').get()
         # locale.setlocale(locale.LC_TIME, 'ru_RU.UTF-8')
-        # result = datetime.datetime.strptime(broadcast_date, u'[ %d-%b-%y  %H:%M ]')
+        # result = datetime.datetime.strptime(broadcast_date, u'[ %d-%B-%y  %H:%M ]')
         print(broadcast_date)
 
         # # guest name
