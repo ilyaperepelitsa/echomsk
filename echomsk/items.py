@@ -21,4 +21,5 @@ class InterviewParagraph(Item):
     index = Field()
     speaker = Field()
     text = Field()
+    rl
     pass
