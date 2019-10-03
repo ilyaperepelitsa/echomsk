@@ -30,7 +30,7 @@ class InterviewSpider(scrapy.Spider):
             callback="parse_interview"),
         Rule(
             LinkExtractor(
-                restrict_xpaths = '//*[@class="pager"]//a[@class="ne"]//div[contains(@class, "preview")]//*[@class="txt"]',
+                restrict_xpaths = '//*[@class="pager"]//a[@class="next"]',
                 canonicalize=True,
                 unique=True
             ),
