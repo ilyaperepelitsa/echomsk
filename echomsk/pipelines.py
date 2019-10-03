@@ -35,7 +35,7 @@ class EchomskPipeline(object):
         try:
             index = item["index"][0]
         except:
-            date = None
+            index = None
 
         try:
             speaker = item["speaker"][0]
