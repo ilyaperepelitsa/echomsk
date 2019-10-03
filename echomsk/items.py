@@ -10,7 +10,7 @@ import scrapy
 from scrapy.item import Item, Field
 
 
-class InterviewParagraph(Item):
+class InterviewItem(Item):
     # Meta data
     date = Field()
     guest_name = Field()
