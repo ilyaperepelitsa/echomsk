@@ -60,7 +60,7 @@ class InterviewSpider(CrawlSpider):
         text = response.xpath('//div[@class="mmplayer"]//div[contains(@class, "typical")]//*[not(name()="blockquote")]//text()').getall()
         whole_interview = []
         current_text = ""
-        # current_speaker = ""
+        current_speaker = ""
         for index, paragraph in enumerate(text):
             # chunk_name = paragraph.xpath('name()')
 
@@ -75,18 +75,20 @@ class InterviewSpider(CrawlSpider):
             if (index + 1) < len(text):
                 next_chunk = clean_chunk(text[index + 1])
                 if len(next_chunk) != 1:
-                    whole_interview.append(current_text)
+                    whole_interview.append([index, current_speaker,
+                                                        current_text])
                     current_text = ""
-                    # current_speaker = ""
+                    current_speaker = ""
                 else:
                     pass
             else:
-                whole_interview.append(current_text)
+                whole_interview.append([current_speaker,
+                                                    current_text])
                 # current_text = ""
                 # current_speaker = ""
         # print(whole_interview)
-        for i , k in enumerate(whole_interview):
-            print(str(i) + "__" + len + k + )
+        for i in whole_interview:
+            print(i)
 
 
 
