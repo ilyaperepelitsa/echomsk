@@ -4,7 +4,10 @@
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://doc.scrapy.org/en/latest/topics/item-pipeline.html
+from echomsk.models import *
+from echomsk.functions import *
 
+from sqlalchemy import and_
 
 class EchomskPipeline(object):
     def process_item(self, item, spider):
