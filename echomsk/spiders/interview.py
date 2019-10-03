@@ -24,8 +24,8 @@ class InterviewSpider(scrapy.Spider):
         whole_interview = []
         current_text = ""
         current_speaker = ""
-        for index, part in enumerate(text):
-            
+        for index, text in enumerate(text):
+
 
         # text = [i.replace('\r\n', '').strip() for i in text]
         # # text = [i for i in text if i != "\r\n"]
