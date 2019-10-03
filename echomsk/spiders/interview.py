@@ -56,7 +56,7 @@ class InterviewSpider(CrawlSpider):
         # # host name
         # //div[contains(@class, "lead")]//a//text()
 
-        text = response.xpath('//div[@class="mmcontainer"]//p').getall()
+        text = response.xpath('//div[@class="mmplayer"]//p').getall()
         whole_interview = []
         current_text = ""
         current_speaker = ""
@@ -83,7 +83,7 @@ class InterviewSpider(CrawlSpider):
                                                     current_text])
                 # current_text = ""
                 # current_speaker = ""
-        print(whole_interview)
+        # print(whole_interview)
         for i in whole_interview:
             print(i)
 
