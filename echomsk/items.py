@@ -22,6 +22,4 @@ class InterviewParagraph(Item):
     speaker = Field()
     text = Field()
 
-    
-
     pass
