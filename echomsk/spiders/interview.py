@@ -16,7 +16,7 @@ def clean_chunk(text):
 
 class InterviewSpider(scrapy.Spider):
     name = 'interview'
-    allowed_domains = ['*']
+    # allowed_domains = ['*']
     start_urls = ['https://echo.msk.ru/programs/personalno/']
 
     rules = [
@@ -27,11 +27,11 @@ class InterviewSpider(scrapy.Spider):
             ), callback="parse")
 
 
-        # Rule(
-        #     LinkExtractor(
-        #         restrict_xpaths = '//*[@class="pager"]',
-        #         unique=True
-        #     )),
+        Rule(
+            LinkExtractor(
+                restrict_xpaths = '//*[@class="pager"]',
+                unique=True
+            )),
         # Rule(
         #     LinkExtractor(
         #         restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
