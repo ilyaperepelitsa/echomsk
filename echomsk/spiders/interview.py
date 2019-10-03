@@ -24,10 +24,10 @@ class InterviewSpider(scrapy.Spider):
             LinkExtractor(
                 restrict_xpaths = '//*[@class="pager"]',
                 # canonicalize=True,
-                unique=True,
+                unique=True
 
             ),
-            
+            callback="parse",
             follow=True),
         Rule(
             LinkExtractor(
