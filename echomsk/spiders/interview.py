@@ -41,7 +41,7 @@ class InterviewSpider(scrapy.Spider):
                 current_text += " "
                 current_text += chunk[0]
 
-            if index < len(text):
+            if index + 1 < len(text):
                 next_chunk = clean_chunk(text[index + 1])
                 if len(next_chunk) != 1:
                     whole_interview.append(tuple(index, current_speaker,
