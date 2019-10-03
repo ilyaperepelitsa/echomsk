@@ -20,16 +20,24 @@ class InterviewSpider(scrapy.Spider):
     start_urls = ['https://echo.msk.ru/programs/personalno/']
 
     rules = [
-        Rule(
-            LinkExtractor(
-                restrict_xpaths = '//*[@class="pager"]',
-                unique=True
-            )),
+
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
                 unique=True,
             ), callback="parse_interview")
+
+            
+        # Rule(
+        #     LinkExtractor(
+        #         restrict_xpaths = '//*[@class="pager"]',
+        #         unique=True
+        #     )),
+        # Rule(
+        #     LinkExtractor(
+        #         restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
+        #         unique=True,
+        #     ), callback="parse_interview")
 
     ]
 
