@@ -15,8 +15,8 @@ class EchomskPipeline(object):
                         "host_name" : item["host_name"],
                         "index" : item["index"],
                         "speaker" : item["speaker"],
-                        "text" : item["subtitle"],
-                        "url" : item["title_pos"]
+                        "text" : item["text"],
+                        "url" : item["url"]
                         }
 
         # data_exists = session_test.query(exists().where(
