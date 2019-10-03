@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.selector import Selector
 
-def cl
+def clean_chunk()
 
 class InterviewSpider(scrapy.Spider):
     name = 'interview'
