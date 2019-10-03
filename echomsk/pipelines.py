@@ -12,7 +12,7 @@ from sqlalchemy import and_
 class EchomskPipeline(object):
     def process_item(self, item, spider):
 
-        data_entry = {"date" : item["date"],
+        data_entry = {"date" : item["date"][0],
                         "guest_name" : item["guest_name"],
                         "guest_title" : item["guest_title"],
                         "host_name" : item["host_name"],
