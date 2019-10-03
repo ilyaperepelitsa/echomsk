@@ -19,8 +19,8 @@ class EchomskPipeline(object):
                         host_name : item["host_name"][0],
                         index : item["index"][0],
                         speaker : item["speaker"][0],
-                        "text" : item["text"][0],
-                        "url" : item["url"][0]
+                        text : item["text"][0],
+                        url" : item["url"][0]
 
 
         data_entry = {"date" : item["date"][0],
