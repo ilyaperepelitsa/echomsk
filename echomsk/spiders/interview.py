@@ -22,7 +22,7 @@ class InterviewSpider(scrapy.Spider):
     rules = [
         Rule(
             LinkExtractor(
-                restrict_xpaths = '//*[@class="pager"]',
+                alow = '//*[@class="pager"]',
                 unique=True
             )),
         Rule(
