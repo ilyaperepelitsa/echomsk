@@ -46,10 +46,10 @@ ROBOTSTXT_OBEY = False
 
 # Enable or disable spider middlewares
 # See https://doc.scrapy.org/en/latest/topics/spider-middleware.html
-SPIDER_MIDDLEWARES = {
-   'echomsk.middlewares.EchomskSpiderMiddleware': 543,
-   scrapy.spidermiddlewares.offsite.OffsiteMiddleware': None,
-}
+# SPIDER_MIDDLEWARES = {
+#    'echomsk.middlewares.EchomskSpiderMiddleware': 543,
+#    'scrapy.spidermiddlewares.offsite.OffsiteMiddleware': None,
+# }
 
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
