@@ -39,9 +39,9 @@ class InterviewSpider(scrapy.Spider):
 
 
             next_chunk = text[index + 1]
-            next_chunk = Selector(text=paragraph).xpath('//text()').getall()
-            chunk = [i.replace('\r\n', '').strip() for i in chunk]
-            chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in chunk]
+            next_chunk = Selector(text=next_chunk).xpath('//text()').getall()
+            chunk = [i.replace('\r\n', '').strip() for i in next_chunk]
+            chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in next_chunk]
             chunk = [i.strip() for i in chunk]
             chunk = [i for i in chunk if len(i) > 1]
 
