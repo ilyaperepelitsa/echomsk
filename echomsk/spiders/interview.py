@@ -20,7 +20,13 @@ class InterviewSpider(scrapy.Spider):
     start_urls = ['https://echo.msk.ru/programs/personalno/']
 
     rules = [
-    
+        Rule(
+            LinkExtractor(
+                restrict_xpaths = '//*[@class="pager"]//a[@class="next"]',
+                # canonicalize=True,
+                unique=True
+            ),
+            follow=True),
         Rule(
             LinkExtractor(
                 restrict_xpaths = '//*[@class="content"]//div[@class="rel"]//div[contains(@class, "preview")]//*[@class="txt"]',
@@ -28,7 +34,7 @@ class InterviewSpider(scrapy.Spider):
                 unique=True
             ),
             follow=True,
-            callback="parse_interview"),
+            callback="parse_interview")
 
     ]
 
