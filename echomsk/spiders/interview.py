@@ -151,7 +151,7 @@ class InterviewSpider(CrawlSpider):
                     # ['url'] = respone.url()
 
                     item = interview_item.load_item()
-                    yield item
+                    yield(item)
 
 
 
