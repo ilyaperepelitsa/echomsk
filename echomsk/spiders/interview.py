@@ -133,11 +133,7 @@ class InterviewSpider(CrawlSpider):
                 interview_item.add_value('url', meta['url'])
                 interview_item.add_value('match_name', meta['match_name'])
                 interview_item.add_value('title', meta['title'])
-                video_item.add_value('subtitle', meta['subtitle'])
-                video_item.add_value('title_pos', meta['title_pos'])
-                video_item.add_value('video_list_size', meta['video_list_size'])
-                video_item.add_value('basic_index', meta['basic_index'])
-                video_item.add_xpath("terminal_title", '//title/text()')
+                interview_item.add_value('subtitle', meta['subtitle'])
                 item = video_item.load_item()
                 yield item
 
