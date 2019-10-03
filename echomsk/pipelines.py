@@ -12,8 +12,9 @@ from sqlalchemy import and_
 class EchomskPipeline(object):
     def process_item(self, item, spider):
 
-
+        try:
         date = item["date"][0],
+        
         guest_name = item["guest_name"][0],
         guest_title = item["guest_title"][0],
         host_name = item["host_name"][0],
