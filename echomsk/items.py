@@ -13,7 +13,7 @@ from scrapy.item import Item, Field
 class InterviewParagraph(Item):
     # Meta data
     date = Field()
-    url = Field()
+    guest_name = Field()
 
 
     job_position = Field()
