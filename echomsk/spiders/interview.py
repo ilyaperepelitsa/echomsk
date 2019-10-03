@@ -2,7 +2,7 @@
 import scrapy
 from scrapy.selector import Selector
 
-from scrapy.linkextractor import LinkExtractor
+from scrapy.linkextractor import LinkExtractor, LxmlLinkExtractor
 from scrapy.spiders import Rule, CrawlSpider
 
 
@@ -23,7 +23,6 @@ class InterviewSpider(scrapy.Spider):
 
         Rule(
             LxmlLinkExtractor(allow=()),
-                allow = ".",
                 unique=True
             ), callback="parse")
 
