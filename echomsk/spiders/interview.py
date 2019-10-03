@@ -30,4 +30,4 @@ class InterviewSpider(scrapy.Spider):
 
 
 
-[]
+pew = ['a', 'b', ]
