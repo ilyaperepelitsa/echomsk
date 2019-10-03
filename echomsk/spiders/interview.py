@@ -38,6 +38,7 @@ class InterviewSpider(scrapy.Spider):
             # chunk = [re.sub(r'^НОВОСТИ|новости$', '', i) for i in chunk]
             # chunk = [i.strip() for i in chunk]
             # chunk = [i for i in chunk if len(i) > 1]
+            chunk = 
             if len(chunk) > 1:
                 current_speaker = chunk[0]
                 current_text = chunk[-1]
