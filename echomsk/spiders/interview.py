@@ -22,7 +22,7 @@ class InterviewSpider(scrapy.Spider):
     rules = [
 
         Rule(
-            LxmlLinkExtractor(allow=(),
+            LinkExtractor(allow=(),
                 unique=True
             ), callback="parse")
 
