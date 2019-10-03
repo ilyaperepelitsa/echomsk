@@ -104,8 +104,10 @@ class InterviewSpider(CrawlSpider):
                 "guest_name" : guest_name,
                 "guest_title" : guest_title,
                 "host_name" : host_name,
-                "whole_interview" : whole_interview,
+                "interview" : whole_interview,
                 }
+
+        pr
 
 
 
