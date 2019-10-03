@@ -72,6 +72,11 @@ class InterviewSpider(CrawlSpider):
         # # host name
         host_name = response.xpath('//div[contains(@class, "lead")]//a//text()').get()
 
+        # nid_error_exists = session_test.query(exists().where(and_(
+        #             Errors.bmid == check_nid['bmid'],
+        #             Errors.error_type == 'newsId not extracted'
+        #             ))).scalar()
+
         text = response.xpath('//div[@class="mmplayer"]//p').getall()
         whole_interview = []
         current_text = ""
