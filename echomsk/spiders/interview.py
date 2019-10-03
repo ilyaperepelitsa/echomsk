@@ -143,7 +143,7 @@ class InterviewSpider(CrawlSpider):
                     interview_item.add_value('index', int(i[0]))
                     # ['index'] =
                     interview_item.add_value('bmid', meta['bmid'])
-                    ['speaker'] = str(i[1])
+                    ['speaker'] =
                     interview_item.add_value('bmid', meta['bmid'])
                     ['paragraph'] = str(i[2])
                     # .encode('ascii','ignore')
