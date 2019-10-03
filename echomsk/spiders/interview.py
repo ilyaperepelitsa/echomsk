@@ -83,7 +83,7 @@ class InterviewSpider(CrawlSpider):
                                                     current_text])
                 # current_text = ""
                 # current_speaker = ""
-        print(len(whole_interview))
+        print(whole_interview)
 
 
 
