@@ -32,7 +32,7 @@ class InterviewParagraph(Base_item):
     __tablename__ = "video_url_entries"
     id = Column(INTEGER, primary_key = True)
     date = Column(Date, nullable=False, index = True)
-    guest_name = Column(VARCHAR(50), nullable=True)
+    guest_name = Column(VARCHAR(50), nullable=True, index = Tre)
     guest_title = Column(TEXT, nullable=True)
     host_name = Column(VARCHAR(50), unique = False)
     index = Column(INTEGER, nullable=True)
