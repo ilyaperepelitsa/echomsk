@@ -48,6 +48,7 @@ class InterviewSpider(scrapy.Spider):
                                                         current_text))
                 else:
                     pass
+            else
 
 
 
