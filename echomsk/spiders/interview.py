@@ -12,7 +12,7 @@ import re
 
 from scrapy.loader import ItemLoader
 import json
-from lolmath.items import ApiItem
+from echomsk.items import ApiItem
 from lolmath.models import *
 from lolmath.functions import *
 
