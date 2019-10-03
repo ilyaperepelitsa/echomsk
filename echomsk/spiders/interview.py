@@ -25,8 +25,7 @@ class InterviewSpider(scrapy.Spider):
                 restrict_xpaths = '//*[@class="pager"]',
                 unique=True
 
-            ),
-            follow=True),
+            )),
         Rule(
             LinkExtractor(
                 allow=[r'.*',],
