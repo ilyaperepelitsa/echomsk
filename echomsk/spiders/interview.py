@@ -34,8 +34,7 @@ class InterviewSpider(scrapy.Spider):
                 # canonicalize=True,
                 unique=True
             ),
-            follow=True,
-            callback="parse"),
+            follow=True),
     ]
 
 
