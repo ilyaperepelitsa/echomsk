@@ -133,7 +133,7 @@ class InterviewSpider(CrawlSpider):
                 interview_item['host_name'] = entry['host_name']
                 interview_item['index'] = i[0]
                 interview_item['speaker'] = entry['date']
-                interview_item['date'] = entry['date']
+                interview_item['paragraph'] = entry['date']
 
                 item = video_item.load_item()
                 yield item
